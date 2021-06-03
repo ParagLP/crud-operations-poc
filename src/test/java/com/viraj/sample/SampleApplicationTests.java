@@ -1,6 +1,7 @@
 package com.viraj.sample;
 
 import com.viraj.sample.entity.Employee;
+import com.viraj.sample.exception.DuplicateRecordException;
 import com.viraj.sample.service.EmployeeServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +26,7 @@ public class SampleApplicationTests {
 	}
 
 	@Test
-	public void getbyIdTest()
+	public void getByIdTest()
 	{
 		   Employee e1=empl.getEmployee(1L);
 		   assertEquals("Raj",e1.getEmployeeName());
@@ -33,7 +34,7 @@ public class SampleApplicationTests {
 	}
 
 	@Test
-	public void getbyNameTest()
+	public void getByNameTest()
 	{
 		List<Employee> e2= empl.getEmployeeByName("Raj");
 		assertEquals(1,e2.size());
@@ -41,6 +42,26 @@ public class SampleApplicationTests {
 
 	}
 
+	@Test
+	public void testSaveEmployee() throws DuplicateRecordException {
+		Employee e3=new Employee("Kiran","HR");
+		empl.saveEmployee(e3);
+	}
+
+	@Test
+	public void testUpdateEmployee()
+	{
+		Employee e3=new Employee("Kiran123","HR123");
+		empl.updateEmployee(e3);
+	}
+
+	@Test
+	public void testDeleteEmployee()
+	{
+
+		empl.deleteEmployee(1L);
+
+	}
 
 
 }
