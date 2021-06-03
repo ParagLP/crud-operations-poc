@@ -17,19 +17,19 @@ This project has implemented all the crud operations in a simple way. You can le
 ##  API Signatures
 Here I have run this application in localhost and 8883 port. You can change the port as you wish. 
 
-### localhost:8883/employee/save
+### localhost:8883/employee/
 This API will save an employee in employee database. (a record will insert to employee table). 
 
-### localhost:8883/employee/getall
+### localhost:8883/employee/
 This API will give details of all the employees as a List. 
 
-### localhost:8883/employee/getone/{employeeId}
+### localhost:8883/employee/{employeeId}
 This API will give details of the employee, that we send the employee id in the url. 
 
-### localhost:8883/employee/delete/{employeeId}
+### localhost:8883/employee/{employeeId}
 This API will give delete the employee, that we send the employee id in the url.(delete the record of that employee from employee table) 
 
-### localhost:8883/employee/update
+### localhost:8883/employee/
 This API will update the details of an employee. (update the employee table) 
 
 ##  Let’s test the API 
