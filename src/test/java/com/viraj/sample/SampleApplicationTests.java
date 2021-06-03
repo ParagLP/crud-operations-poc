@@ -28,14 +28,14 @@ public class SampleApplicationTests {
 	public void getbyIdTest()
 	{
 		   Employee e1=empl.getEmployee(1L);
-		   assertEquals("som",e1.getEmployeeName());
+		   assertEquals("Raj",e1.getEmployeeName());
 		  // assertEquals("tom",e1.getEmployeeName());
 	}
 
 	@Test
 	public void getbyNameTest()
 	{
-		List<Employee> e2= empl.getEmployeeByName("som");
+		List<Employee> e2= empl.getEmployeeByName("Raj");
 		assertEquals(1,e2.size());
 
 
